@@ -4,9 +4,14 @@
 		<title>Document</title>
 	</head>
 <body>
-	<header>
-	<?= $greeting?>
-	</header>
+	<h1>Tarefas do dia</h1>
 
+	<ul>
+		
+		<li>
+			
+		</li>
+
+	</ul>
 </body>
 </html>

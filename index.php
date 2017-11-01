@@ -1,12 +1,13 @@
 <?php
 
-$task = [
-	'title'	=> "Estudar PhP",
-	'due'	=>	"Aprender php pra beck-end",
-	'assigned_to' => "eu",
-	'completed' => false
-];
+require 'function.php';
+require 'index.view.php';
 
-var_dump($task);
+if(majority(24)){
+	echo 'Vc pode entrar';
+}else{
+	echo 'Vc n pode entrar';
+}
+
 
 ?>
