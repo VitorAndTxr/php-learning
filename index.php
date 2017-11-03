@@ -1,13 +1,8 @@
 <?php
-
 require 'function.php';
+require 'Task.php';
+
+$pdo = connectToDb();
+$tasks = fetchAllTasks($pdo);
+var_dump($tasks);
 require 'index.view.php';
-
-if(majority(24)){
-	echo 'Vc pode entrar';
-}else{
-	echo 'Vc n pode entrar';
-}
-
-
-?>

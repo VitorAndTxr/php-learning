@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Document</title>
-	</head>
+<html lang ="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+</head>
 <body>
-	<h1>Tarefas do dia</h1>
-
 	<ul>
-		
-		<li>
-			
-		</li>
-
+		<?php foreach ($tasks as $task) : ?>
+			<li>
+				<?php if ($task->completed) : ?>
+					<strike><?= $task->description; ?></strike>
+				<?php else: ?>
+					<?= $task->description; ?>
+				<?php endif; ?>
+			</li>
+		<?php endforeach; ?>
 	</ul>
+	<h1>heuhauehuae</h1>
 </body>
 </html>
