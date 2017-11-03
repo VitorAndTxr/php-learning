@@ -16,6 +16,5 @@
 			</li>
 		<?php endforeach; ?>
 	</ul>
-	<h1>heuhauehuae</h1>
 </body>
 </html>
