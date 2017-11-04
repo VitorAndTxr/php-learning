@@ -1,7 +1,7 @@
 <?php
 
 class Router{
-	protected $routes = [];
+	protected $router = [];
 
 	public static function load($file){
 		$router = new static;
@@ -10,14 +10,15 @@ class Router{
 	}
 
 	public function define($routes){
-		$this->routes = $routes;
+		$this->router = $routes;
 	}
 
 	public function direct($uri){
-		if(array_key_exists($uri, $this->routes)){
-			return $this->routes[$uri];
+		if(array_key_exists($uri, $this->router)){
+			return $this->router[$uri];
+		}else{
+			throw new Exception("No route defined for this URI $uri");
 		}
-		throw new Exception('No route defined for this URI');
 	}
 
 }
